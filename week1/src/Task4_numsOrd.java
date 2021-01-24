@@ -4,6 +4,7 @@ public class Task4_numsOrd {
     public static void main(String[] args) {
         //给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的
         //相对顺序。
+        // 本题采用插入排序，动态规划的思想
         int[] nums = new int[10001];//开辟一个大数组
         int length = 0;//记录当前需要处理的数组长度
         System.out.println("请输入原数组,以非数值停止：");
@@ -25,6 +26,7 @@ public class Task4_numsOrd {
             }
         }
 
+        System.out.print("改变后的数组：");
         for (int i = 1; i <= L; i++) {
             System.out.print(nums[i] + " ");
         }
