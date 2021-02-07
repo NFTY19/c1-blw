@@ -1,7 +1,7 @@
 package task4_guess;
 
 public class Game {
-    private int v = 100;
+    private int v = (int) (Math.random() * 100 + 1);
 
     public int getV() {
         return v;
