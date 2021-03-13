@@ -179,3 +179,52 @@ SELECT AVG(Score) FROM Choose WHERE CourseID = 'c1';
 
 #29
 SELECT CourseID, CourseName FROM Course WHERE CourseBeforeID IS NULL;
+
+#30
+SELECT
+	student.`SNO`,
+	student.`NAME`,
+	course.`CourseName`,
+	choose.`Score`
+FROM
+	student,
+	course,
+	choose
+WHERE
+	choose.`SNO` = student.`SNO`
+	AND
+	choose.`CourseID` = course.`CourseID`;
+
+#31
+SELECT *
+FROM student s1
+WHERE EXISTS
+(SELECT * FROM student s2 WHERE s1.`College` = s2.`College` AND s2.`NAME` = '张三');
+
+#32
+SELECT st.`SNO`,`Score`
+FROM student st,`choose` ch
+WHERE st.sno = ch.sno AND `CourseID` = 'C1' AND score<
+(
+SELECT Score
+FROM `choose`,`student`
+WHERE choose.SNO = student.SNO AND `CourseID` = 'C1' AND `Name` = '张三'
+)
+
+#33
+SELECT st.SNO
+FROM `student` st,`choose` ch
+WHERE `CourseID`='C1' AND st.sno = ch.sno
+UNION
+SELECT st.SNO
+FROM `student` st,`choose` ch
+WHERE `CourseID`='C3' AND st.sno = ch.sno;
+
+#34
+SELECT DISTINCT st.`SNO`
+FROM student st,`choose` ch
+WHERE st.sno = ch.sno AND ch.`CourseID` = 'c1'
+UNION
+SELECT DISTINCT st.`SNO`
+FROM student st,`choose` ch
+WHERE st.sno = ch.sno AND ch.`CourseID` = 'c3';
