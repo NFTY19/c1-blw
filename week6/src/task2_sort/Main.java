@@ -48,12 +48,21 @@ public class Main {
 
         //归并排序
         MergeSort mergeSort = new MergeSort();
-        mergeSort.msort(arr,1,n);
+        mergeSort.msort(arr,1, n);
         System.out.print("MergeSort : ");
         for (int i = 1; i <= n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
 
+
+        //堆排序
+        HeapSort heapSort = new HeapSort();
+        heapSort.hsort(arr, 1, n);
+        System.out.print("HeapSort : ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 }
