@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.AccountDao">
+
+    <select id="findAll" resultType="entity.Account">
+        select * from homework.account;
+    </select>
+
+    <delete id="deleteByPrimaryKey">
+        delete from account where id = #{id};
+    </delete>
+
+    <insert id="insert" parameterType="entity.Account">
+        insert into homework.account(id, name, money, createtime, updatetime)
+        values (#{id}, #{name}, #{money}, #{createtime}, #{updatetime});
+    </insert>
+
+    <select id="selectByPrimaryKey" parameterType="String" resultType="entity.Account">
+        select * from homework.account
+        where id = #{id};
+    </select>
+
+    <update id="updateByPrimaryKey" parameterType="entity.Account">
+        update
+            homework.account
+        set
+            name = #{name},
+            money = #{money},
+            createtime = #{createtime},
+            updatetime = #{updatetime}
+        where
+            id = #{id};
+    </update>
+</mapper>
