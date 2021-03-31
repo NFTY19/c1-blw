@@ -65,3 +65,15 @@ The place where I hand in my homework
 第七周学习内容：
 1. 学习链接：https://www.bilibili.com/video/BV1Fh41197tG?p=1 
 2. 学习内容：完成mybatis框架的基本学习 p1-p75(其中p8到p18、p57-p75不做强制要求学习)，大家本周主要的学习目的是了解框架是什么，以及如何使用mybatis来进行dao层的开发，关于其底层的细节我们先不学习，有兴趣的可以先自学。 
+
+
+### 第八周
+
+第八周学习内容：
+1. 学习连接：https://www.bilibili.com/video/BV1564y1D7qf?p=4
+2. 学习内容：P4-P24
+3. 说明：为了简化学习内容，我们跳过了spring框架的学习， spring框架是一个很经典、面试必问的框架，
+   大家在有空闲的时间可以自己安排时间学习。我们这周直接学习springboot，它集成了很多功能，提供了
+   一种更为快速的方式来使用spring，并且整合其它框架也更为方便。所以这周的学习内容主要是掌握springboot环境的搭建
+   以及springboot对mybatis框架和junit单元测试的整合。在学习视频中遇到的controller、注解等没有学过的内容，就先跳过，
+   只需按照视频的做法掌握如何写即可，目前阶段不用先了解其原理。关于Controller层，我们会在下周在进行springmvc框架的学习。
