@@ -19,13 +19,25 @@ public class AccountController {
         return accountService.findAll();
     }
     //保存account对象
+    /*json
+    {
+        "id": "30",
+        "name": "duck",
+        "createtime": "2021-03-10T00:00:00.000+0000",
+        "updatetime": "2021-04-01T00:00:00.000+0000",
+        "money": 100
+    }
+     */
     @RequestMapping("/account/save")
     public void saveAccount(@RequestBody Account account) {
+        accountService.insert(account);
     }
+
     @RequestMapping("/account/transfer")
     public void transfer(@RequestParam("remitterId") String remitterId,
                          @RequestParam("remitteeId") String remitteeId,
                          @RequestParam("money") int money) {
+        accountService.transfer(remitterId,remitteeId,money);
     }
 }
 
