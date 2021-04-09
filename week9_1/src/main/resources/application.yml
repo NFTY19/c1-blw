@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource # 自定义数据库连接池
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver # 自定义驱动
+    url: jdbc:mysql://localhost:3306/homework?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml # 单词千万不要写错了
