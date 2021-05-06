@@ -96,7 +96,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class MergeTwoLists {
     /*
       三数之和：给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a, b，c ，使得 a + b + c =target。请你找出所有满足条件且不重复的三元组。
      */
@@ -161,7 +161,7 @@ package task3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class MergeTwoLists {
     /*
         给你一个整数数组 nums ，数组中的元素 互不相同 。返回该数组所有可能的子集
 
